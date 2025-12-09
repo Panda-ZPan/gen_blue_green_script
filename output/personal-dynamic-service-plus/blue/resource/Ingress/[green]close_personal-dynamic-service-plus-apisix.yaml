@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    objectset.rio.cattle.io/applied: H4sIAAAAAAAA/4yRsY7cIBCG32Vq4/OdvaxNmypNlCJKE6UYYPZM1gbEzG7utPK7R6yjdNGtRDFI/N/3AzfAHL5T4ZAiGIgkv1M5h/jankduQ3q6PkMD5xA9GPgcXwsxQwMrCXoUBHMDjDEJSkiR6zbZX+SESdoSUutQZKEKCpUwHNzzeNCj8tM4qMGTVxNprY5aHzW9HH03atgaWNDScsdhzm3ElcBApsIp4qL8e8Q1OMVUrsGRysullvqfeUaewUB/6PXku4N3rjvZzlvbD4M/EdE02sGd+mmi8aXvqv8Ro8IcOLzBfpozuhoRYqkEzuRq/7C/2acFmb/s1H+5clmIwfy4wZxYPvK1Fd26tEIDs0iu9Iwy7wSL7kz1l27wN1THh+7BVwcN5FTkHrmslgqYqe+6bduauwMMPME+fnvPFfm10Cm8wfZzq+tPAAAA//9yiA5rRwIAAA
+    objectset.rio.cattle.io/id: 45c18568-d984-4ded-9e66-76676e27d086
+    k8s.apisix.apache.org/enable: 'false'
+    k8s.apisix.apache.org/priority: '20'
+    k8s.apisix.apache.org/set-headers: '{"baggage": "meshEnv=pdynamic-green"}'
+    k8s.apisix.apache.org/filter-headers: null
+    k8s.apisix.apache.org/filter-headers-expr: null
+    k8s.apisix.apache.org/traffic-split-headers: null
+    k8s.apisix.apache.org/traffic-split-percentage: null
+    k8s.apisix.apache.org/traffic-split-service: null
+  labels:
+    app.name: personal-dynamic-service-plus
+    objectset.rio.cattle.io/hash: 35369d05dcc0fb0dbb344dfeee98b4cf399e8230
+  name: personal-dynamic-service-plus-apisix-green
+  namespace: test
+spec:
+  ingressClassName: apisix
+  rules:
+  - host: personal-dynamic-service-plus.test.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: personal-dynamic-service-plus-svc-green
+            port:
+              number: 9300
+        path: /
+        pathType: Prefix

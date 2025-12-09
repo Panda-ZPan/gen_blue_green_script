@@ -1,0 +1,8 @@
+# 泳道配置
+lane: person-kd
+
+# Agent 运行模式
+agent_mode: java_lite
+
+# MSE 命名空间
+mse_ns: cloud-test-default-group

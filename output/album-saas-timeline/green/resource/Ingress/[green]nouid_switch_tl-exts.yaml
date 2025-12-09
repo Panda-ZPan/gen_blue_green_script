@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"labels":{"app.name":"album-saas-timeline"},"name":"tl-exts","namespace":"prod"},"spec":{"ingressClassName":"apisix","rules":[{"host":"album-njs.yun.139.com","http":{"paths":[{"backend":{"service":{"name":"album-saas-timeline-svc","port":{"number":8191}}},"path":"/album/timeline","pathType":"Prefix"}]}}],"tls":[{"hosts":["album-njs.yun.139.com"],"secretName":"tls-secret"}]}}
+
+      '
+    k8s.apisix.apache.org/enable: 'true'
+    k8s.apisix.apache.org/priority: '5'
+    k8s.apisix.apache.org/set-headers: '{"baggage": "meshEnv=album-blue"}'
+    k8s.apisix.apache.org/filter-headers: null
+    k8s.apisix.apache.org/filter-headers-expr: null
+    k8s.apisix.apache.org/traffic-split-headers: '{"baggage": "meshEnv=album-green"}'
+    k8s.apisix.apache.org/traffic-split-percentage: ${nouid_precentage}
+    k8s.apisix.apache.org/traffic-split-service: album-saas-timeline-svc-green
+  labels:
+    app.name: album-saas-timeline
+  name: tl-exts-blue
+  namespace: prod
+spec:
+  ingressClassName: apisix
+  rules:
+  - host: album-njs.yun.139.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: album-saas-timeline-svc-blue
+            port:
+              number: 8191
+        path: /album/timeline
+        pathType: Prefix
+  tls:
+  - hosts:
+    - album-njs.yun.139.com
+    secretName: tls-secret

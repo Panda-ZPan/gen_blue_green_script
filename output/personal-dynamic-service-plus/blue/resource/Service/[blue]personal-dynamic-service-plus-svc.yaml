@@ -1,0 +1,26 @@
+kind: Service
+metadata:
+  annotations:
+    objectset.rio.cattle.io/applied: H4sIAAAAAAAA/5SRQWsbMRCF/8s7S+4mu5Z3dSuBQi7F0NJLyWFWmm3UypKQJgZj/N+LauitkB4lvnnfY+YKKuEb1xZygsX5AQq/QvKw+ML1HBxD4cRCnoRgr6CUspCEnFp/5vUnO2ksuxryzpFI5F3IH0JPmPbuYd6bWftlnvTk2euFjdEHYw6GHw9+mA1uCpFWjn/iqJRdohPDonBtOVHU/pLoFJxu9z66xLcG9U/zK7VXWIz70Sx+2Hvnhm0d/LqO0+Q3Zl7mdXLbuCw8P45D97/HqNvZ4Y62Qq7zwk36eCvsevlQPtEpxMAN9juej2eDF4WSq/SP6/s0Hcd9CnYZh0Gh1CzZ5QiLr09HKAjVHyzHv8jtRaFxZCe5/tcWe3lu/fYfty2kIBdYfM6pH10upQc8xbcmXJ+PuN1+BwAA//++RQUoLQIAAA
+    objectset.rio.cattle.io/id: 45c18568-d984-4ded-9e66-76676e27d086
+  labels:
+    app.name: personal-dynamic-service-plus
+    objectset.rio.cattle.io/hash: 35369d05dcc0fb0dbb344dfeee98b4cf399e8230
+  name: personal-dynamic-service-plus-svc-blue
+  namespace: test
+spec:
+  clusterIP: ''
+  clusterIPs: []
+  ipFamilies:
+  - IPv6
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: personal-dynamic-service-plus-port
+    port: 9300
+    protocol: TCP
+    targetPort: 9300
+  selector:
+    app.name: personal-dynamic-service-plus
+    sidecar.mesh.io/lane: pdynamic-blue
+  sessionAffinity: None
+  type: ClusterIP

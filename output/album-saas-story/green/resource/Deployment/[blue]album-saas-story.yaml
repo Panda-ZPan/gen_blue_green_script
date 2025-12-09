@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '28'
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"deployment.kubernetes.io/revision":"23"},"creationTimestamp":"2024-12-24T16:13:55Z","generation":28,"labels":{"app.name":"album-saas-story"},"name":"album-saas-story","namespace":"prod","resourceVersion":"2340190582","uid":"eb992792-1f50-4bab-8aa7-ea16848a9e57"},"spec":{"progressDeadlineSeconds":600,"replicas":8,"revisionHistoryLimit":10,"selector":{"matchLabels":{"app.name":"album-saas-story","sidecar.mesh.io/lane":"mse-base"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"annotations":{"kubectl.kubernetes.io/restartedAt":"2025-06-24T04:16:16+08:00"},"creationTimestamp":null,"labels":{"app":"album-saas-story","app.name":"album-saas-story","sidecar.mesh.io/data-plane-mode":"java_proxyless","sidecar.mesh.io/lane":"mse-base","sidecar.mesh.io/mse-namespace":"nacos-nj-p02-prod-default-group"}},"spec":{"containers":[{"env":[{"name":"ACTIVE_PROFILE","value":"prod"}],"envFrom":[{"configMapRef":{"name":"mse-publish-gray"}}],"image":"b08ypcg01-53ab9ddf.ecis.guangzhou-2.cmecloud.cn/prod/album-saas-story:2.2.3.RELEASE","imagePullPolicy":"Always","name":"album-saas-story","resources":{"limits":{"cpu":"4","memory":"16Gi"},"requests":{"cpu":"4","memory":"10Gi"}},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File","volumeMounts":[{"mountPath":"/logs","name":"logs"}]}],"dnsPolicy":"ClusterFirst","imagePullSecrets":[{"name":"cis-auth"}],"nodeSelector":{"album":"true"},"restartPolicy":"Always","schedulerName":"default-scheduler","securityContext":{},"terminationGracePeriodSeconds":60,"volumes":[{"hostPath":{"path":"/var/lib/docker/logs","type":"DirectoryOrCreate"},"name":"logs"}]}}},"status":{"availableReplicas":8,"conditions":[{"lastTransitionTime":"2025-07-17T19:39:17Z","lastUpdateTime":"2025-07-17T19:39:17Z","message":"Deployment
+      has minimum availability.","reason":"MinimumReplicasAvailable","status":"True","type":"Available"},{"lastTransitionTime":"2024-12-24T16:13:55Z","lastUpdateTime":"2025-08-15T17:17:52Z","message":"ReplicaSet
+      \"album-saas-story-84d48f4cb\" has successfully progressed.","reason":"NewReplicaSetAvailable","status":"True","type":"Progressing"}],"observedGeneration":28,"readyReplicas":8,"replicas":8,"updatedReplicas":8}}
+
+      '
+  labels:
+    app.name: album-saas-story
+  name: album-saas-story-blue
+  namespace: prod
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 0
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.name: album-saas-story
+      sidecar.mesh.io/lane: album-blue
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: '2025-11-19T02:17:00+08:00'
+      creationTimestamp: null
+      labels:
+        app: album-saas-story
+        app.name: album-saas-story
+        sidecar.mesh.io/data-plane-mode: java_lite
+        sidecar.mesh.io/lane: album-blue
+        sidecar.mesh.io/mse-namespace: nacos-nj-p02-prod-default-group
+    spec:
+      containers:
+      - env:
+        - name: ACTIVE_PROFILE
+          value: prod
+        - name: NACOS_SUFFIX
+          value: .blue
+        envFrom:
+        - configMapRef:
+            name: mse-publish-gray
+        image: b08ypcg01-53ab9ddf.ecis.guangzhou-2.cmecloud.cn/prod/album-saas-story:${imageversion}
+        imagePullPolicy: Always
+        name: album-saas-story
+        resources:
+          limits:
+            cpu: '4'
+            memory: 16Gi
+          requests:
+            cpu: '4'
+            memory: 10Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /logs
+          name: logs
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: cis-auth
+      nodeSelector:
+        album: 'true'
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 60
+      volumes:
+      - hostPath:
+          path: /var/lib/docker/logs
+          type: DirectoryOrCreate
+        name: logs

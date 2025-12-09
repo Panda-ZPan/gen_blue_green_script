@@ -1,0 +1,26 @@
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app.name":"album-saas-classify"},"name":"album-saas-classify-svc","namespace":"prod"},"spec":{"ipFamilies":["IPv6"],"ports":[{"name":"album-saas-classify-port","port":8192,"protocol":"TCP","targetPort":8192}],"selector":{"app.name":"album-saas-classify"},"sessionAffinity":"None","type":"ClusterIP"}}
+
+      '
+  labels:
+    app.name: album-saas-classify
+  name: album-saas-classify-svc-blue
+  namespace: prod
+spec:
+  clusterIP: ''
+  clusterIPs: []
+  ipFamilies:
+  - IPv6
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: album-saas-classify-port
+    port: 8192
+    protocol: TCP
+    targetPort: 8192
+  selector:
+    app.name: album-saas-classify
+    sidecar.mesh.io/lane: album-blue
+  sessionAffinity: None
+  type: ClusterIP

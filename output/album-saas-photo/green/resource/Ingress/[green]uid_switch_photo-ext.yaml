@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"labels":{"app.name":"album-saas-photo"},"name":"photo-ext","namespace":"prod"},"spec":{"ingressClassName":"apisix","rules":[{"host":"album-njs.yun.139.com","http":{"paths":[{"backend":{"service":{"name":"album-saas-photo-svc","port":{"number":8193}}},"path":"/album/photo","pathType":"Prefix"}]}}]}}
+
+      '
+    k8s.apisix.apache.org/enable: 'true'
+    k8s.apisix.apache.org/priority: '20'
+    k8s.apisix.apache.org/set-headers: '{"baggage": "meshEnv=album-green"}'
+    k8s.apisix.apache.org/filter-headers: null
+    k8s.apisix.apache.org/filter-headers-expr: '[{"x-yun-uni":"${uid_precentage}"}]'
+    k8s.apisix.apache.org/traffic-split-headers: null
+    k8s.apisix.apache.org/traffic-split-percentage: null
+    k8s.apisix.apache.org/traffic-split-service: null
+  labels:
+    app.name: album-saas-photo
+  name: photo-ext-green
+  namespace: prod
+spec:
+  ingressClassName: apisix
+  rules:
+  - host: album-njs.yun.139.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: album-saas-photo-svc
+            port:
+              number: 8193
+        path: /album/photo
+        pathType: Prefix
