@@ -6,3 +6,13 @@ agent_mode: java_lite
 
 # MSE 命名空间
 mse_ns: cloud-test-default-group
+
+
+#蓝绿环境名称（可任意命名）
+blue_name: blue      # 默认值
+green_name: green    # 默认值
+
+
+# 仅影响资源名后缀
+blue_env: blue
+green_env: green

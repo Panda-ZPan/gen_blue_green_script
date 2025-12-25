@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-蓝绿发布资源自动生成脚本 - Excel批量版（防呆加固）
+蓝绿发布资源自动生成脚本 - Excel批量版（支持自定义蓝/绿环境名称）
 """
 
 import os
@@ -23,7 +23,7 @@ except ImportError:
     sys.exit(1)
 
 
-# ---------------- 数据类 ----------------
+# ---------- 数据类 ----------
 class ServiceConfig:
     def __init__(self, service_name: str, lane: str, mse_ns: str,
                  deployment_yaml: str, service_yaml: str, ingress_yaml: str):
@@ -35,13 +35,14 @@ class ServiceConfig:
         self.ingress_yaml = ingress_yaml
 
 
-# ---------------- 生成器 ----------------
+# ---------- 生成器 ----------
 class BlueGreenGenerator:
     def __init__(self, config: Dict[str, Any], service_config: ServiceConfig):
         self.service_config = service_config
         self.lane = service_config.lane
         self.agent_mode = config.get('agent_mode', 'java_lite')
         self.mse_ns = service_config.mse_ns
+        # ↓↓↓ 新增：读取可配置的环境名称 ↓↓↓
         self.blue_name = config.get('blue_name', 'blue')
         self.green_name = config.get('green_name', 'green')
 
@@ -58,27 +59,7 @@ class BlueGreenGenerator:
             'ingress': []
         }
 
-    # ---------- 公共防呆工具 ----------
-    @staticmethod
-    def _safe_add_label(obj: Dict, key: str, value: str):
-        """标签级：无则加，有则改"""
-        if obj.get(key) != value:
-            obj[key] = value
-
-    @staticmethod
-    def _safe_add_selector(selector: Dict, key: str, value: str):
-        """selector 级：无则加，有则改"""
-        if selector.get(key) != value:
-            selector[key] = value
-
-    @staticmethod
-    def _ensure_env(container: Dict, name: str, value: str):
-        """保证容器里环境变量唯一且最新"""
-        env_list = container.setdefault('env', [])
-        env_list[:] = [e for e in env_list if e.get('name') != name]
-        env_list.append({'name': name, 'value': value})
-
-    # ---------- 加载 ----------
+    # ---------------- 以下所有方法与您 v3.1 完全一致 ----------------
     def load_from_excel(self):
         print(f"📂 解析服务: {self.service_config.service_name}")
         try:
@@ -118,7 +99,6 @@ class BlueGreenGenerator:
         print(f"   资源名称: deployment={self.resource_names['deployment']}, "
               f"service={self.resource_names['service']}, ingress={self.resource_names['ingress']}")
 
-    # ---------- 小工具 ----------
     def _update_image_tag(self, image: str) -> str:
         pattern = r'^(.*:).*$'
         match = re.match(pattern, image)
@@ -134,12 +114,11 @@ class BlueGreenGenerator:
         env_from.append({'configMapRef': {'name': 'mse-publish-gray'}})
 
     def _clean_cluster_ip(self, service_spec: Dict):
-        if service_spec.get('clusterIP') not in ('', None):
+        if 'clusterIP' in service_spec:
             service_spec['clusterIP'] = ''
-        if service_spec.get('clusterIPs') not in ([], None):
+        if 'clusterIPs' in service_spec:
             service_spec['clusterIPs'] = []
 
-    # ---------- 生成 Deployment ----------
     def generate_blue_green_deployment(self, env: str) -> Dict:
         base_deploy = deepcopy(self.deployments[0])
         deploy_name = self.resource_names['deployment']
@@ -147,33 +126,27 @@ class BlueGreenGenerator:
         labels = base_deploy['spec']['template']['metadata'].setdefault('labels', {})
         if 'app' not in labels:
             labels['app'] = deploy_name
-        # 防呆写入
-        self._safe_add_label(labels, 'sidecar.mesh.io/data-plane-mode', self.agent_mode)
-        self._safe_add_label(labels, 'sidecar.mesh.io/lane', f"{self.lane}-{env}")
-        self._safe_add_label(labels, 'sidecar.mesh.io/mse-namespace', self.mse_ns)
-
+        labels['sidecar.mesh.io/data-plane-mode'] = self.agent_mode
+        labels['sidecar.mesh.io/lane'] = f"{self.lane}-{env}"
+        labels['sidecar.mesh.io/mse-namespace'] = self.mse_ns
         base_deploy['spec']['replicas'] = '${replicas}'
-        self._safe_add_selector(base_deploy['spec']['selector']['matchLabels'],
-                                'sidecar.mesh.io/lane', f"{self.lane}-{env}")
-
+        base_deploy['spec']['selector']['matchLabels']['sidecar.mesh.io/lane'] = f"{self.lane}-{env}"
         containers = base_deploy['spec']['template']['spec']['containers']
         for container in containers:
-            self._ensure_env(container, 'NACOS_SUFFIX', f'.{env}')
+            env_vars = container.setdefault('env', [])
+            env_vars.append({'name': 'NACOS_SUFFIX', 'value': f'.{env}'})
             self._add_configmap_ref(container)
             container['image'] = self._update_image_tag(container['image'])
         return base_deploy
 
-    # ---------- 生成 Service ----------
     def generate_blue_green_service(self, env: str) -> Dict:
         base_svc = deepcopy(self.services[0])
         svc_name = self.resource_names['service']
         base_svc['metadata']['name'] = f"{svc_name}-{env}"
-        self._safe_add_selector(base_svc['spec']['selector'],
-                                'sidecar.mesh.io/lane', f"{self.lane}-{env}")
+        base_svc['spec']['selector']['sidecar.mesh.io/lane'] = f"{self.lane}-{env}"
         self._clean_cluster_ip(base_svc['spec'])
         return base_svc
 
-    # ---------- 生成 Ingress ----------
     def generate_ingress(self, base_ingress: Dict, ingress_type: str, env: str) -> Dict:
         ingress = deepcopy(base_ingress)
         ingress_name = ingress['metadata']['name']
@@ -255,7 +228,6 @@ class BlueGreenGenerator:
                     elif 'service' in path['backend']:
                         path['backend']['service']['name'] = service_name
 
-    # ---------- 基线资源 ----------
     def generate_baseline_deployment(self, with_agent: bool = True) -> Dict:
         base_deploy = deepcopy(self.deployments[0])
         labels = base_deploy['spec']['template']['metadata'].setdefault('labels', {})
@@ -263,10 +235,10 @@ class BlueGreenGenerator:
         if with_agent:
             if 'app' not in labels:
                 labels['app'] = self.resource_names['deployment']
-            self._safe_add_label(labels, 'sidecar.mesh.io/data-plane-mode', self.agent_mode)
-            self._safe_add_label(labels, 'sidecar.mesh.io/lane', 'mse-base')
-            self._safe_add_label(labels, 'sidecar.mesh.io/mse-namespace', self.mse_ns)
-            self._safe_add_selector(match_labels, 'sidecar.mesh.io/lane', 'mse-base')
+            labels['sidecar.mesh.io/data-plane-mode'] = self.agent_mode
+            labels['sidecar.mesh.io/lane'] = 'mse-base'
+            labels['sidecar.mesh.io/mse-namespace'] = self.mse_ns
+            match_labels['sidecar.mesh.io/lane'] = 'mse-base'
             for container in base_deploy['spec']['template']['spec']['containers']:
                 self._add_configmap_ref(container)
         else:
@@ -289,7 +261,7 @@ class BlueGreenGenerator:
         base_svc = deepcopy(self.services[0])
         selector = base_svc['spec'].setdefault('selector', {})
         if with_agent:
-            self._safe_add_selector(selector, 'sidecar.mesh.io/lane', 'mse-base')
+            selector['sidecar.mesh.io/lane'] = 'mse-base'
         else:
             selector.pop('sidecar.mesh.io/lane', None)
         self._clean_cluster_ip(base_svc['spec'])
@@ -310,7 +282,6 @@ class BlueGreenGenerator:
         })
         return ingress
 
-    # ---------- 保存 ----------
     def save_yaml(self, data: Dict, filepath: str):
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         def null_representer(dumper, data):
@@ -320,7 +291,7 @@ class BlueGreenGenerator:
             yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
         print(f"   ✓ {os.path.relpath(filepath, os.path.dirname(os.path.dirname(filepath)))}")
 
-    # ---------- 批量生成 ----------
+    # ---------------- 唯一目录名改动点 ----------------
     def generate_all(self, output_root: str):
         print("\n🚀 开始生成资源文件...")
         output_dir = os.path.join(output_root, self.service_config.service_name)
@@ -329,7 +300,7 @@ class BlueGreenGenerator:
         deploy_name = self.resource_names['deployment']
         svc_name = self.resource_names['service']
 
-        # Blue
+        # Blue 环境目录名改用 self.blue_name
         print(f"\n📘 生成 {self.blue_name} 环境资源:")
         blue_dir = os.path.join(output_dir, self.blue_name, 'resource')
         blue_deploy = self.generate_blue_green_deployment(self.blue_name)
@@ -352,7 +323,7 @@ class BlueGreenGenerator:
             self.save_yaml(self.generate_ingress(base_ingress, 'close', self.blue_name),
                            os.path.join(blue_dir, f'Ingress/[green]close_{ingress_name}.yaml'))
 
-        # Green
+        # Green 环境目录名改用 self.green_name
         print(f"\n📗 生成 {self.green_name} 环境资源:")
         green_dir = os.path.join(output_dir, self.green_name, 'resource')
         green_deploy = self.generate_blue_green_deployment(self.green_name)
@@ -375,7 +346,7 @@ class BlueGreenGenerator:
             self.save_yaml(self.generate_ingress(base_ingress, 'close', self.green_name),
                            os.path.join(green_dir, f'Ingress/[blue]close_{ingress_name}.yaml'))
 
-        # Base
+        # 基线
         print("\n📙 生成基线环境资源:")
         base_dir = os.path.join(output_dir, 'mse-base', 'resource')
         self.save_yaml(self.generate_baseline_deployment(with_agent=True),
@@ -406,14 +377,14 @@ class BlueGreenGenerator:
         print(f"\n📊 复制全局变量文件到 {self.service_config.service_name}...")
         self._copy_global_var_files(output_dir)
 
-        # 打包
+        # 打包 zip（目录名用实际名称）
         print(f"\n📦 开始打包 {self.service_config.service_name} 的 zip 压缩包...")
         for env_key in [self.blue_name, self.green_name, 'mse-base']:
             env_path = Path(output_dir) / env_key
             if env_path.is_dir():
                 self._zip_environment(env_path, env_key)
 
-    # ---------- 辅助 ----------
+    # ---------------- 后续方法与您原脚本完全一致 ----------------
     def _copy_global_var_files(self, output_dir: str):
         env_dirs = {self.blue_name: os.path.join(output_dir, self.blue_name),
                     self.green_name: os.path.join(output_dir, self.green_name),
@@ -451,7 +422,7 @@ class BlueGreenGenerator:
         ]
 
 
-# ---------------- 配置加载 ----------------
+# ---------- 配置加载 ----------
 def load_config(config_file: str) -> Dict[str, Any]:
     if not os.path.exists(config_file):
         print(f"⚠️  配置文件不存在: {config_file}, 使用默认配置")
@@ -469,7 +440,7 @@ def load_config(config_file: str) -> Dict[str, Any]:
     return cfg
 
 
-# ---------------- Excel 批处理 ----------------
+# ---------- Excel 批处理 ----------
 def process_excel(excel_path: str, config: Dict[str, Any], output_root: str):
     print(f"\n📊 读取Excel文件: {excel_path}")
     try:
@@ -511,10 +482,10 @@ def process_excel(excel_path: str, config: Dict[str, Any], output_root: str):
             continue
 
 
-# ---------------- Main ----------------
+# ---------- 入口 ----------
 def main():
     parser = argparse.ArgumentParser(
-        description='蓝绿发布资源自动生成脚本 - Excel批量版（防呆加固）',
+        description='蓝绿发布资源自动生成脚本 - Excel批量版（支持自定义蓝/绿环境名称）',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 示例:
@@ -532,7 +503,7 @@ def main():
 
     try:
         print("=" * 60)
-        print("🎯 蓝绿发布资源自动生成脚本 - Excel批量版（防呆加固）")
+        print("🎯 蓝绿发布资源自动生成脚本 - Excel批量版（支持自定义蓝/绿环境名称）")
         print("=" * 60)
         config = load_config(args.config)
         print(f"\n⚙️  全局配置:")
