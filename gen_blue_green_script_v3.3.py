@@ -23,6 +23,21 @@ except ImportError:
     sys.exit(1)
 
 
+# ---- 新增：强制单引号字符串 ----
+class SingleQuotedStr(str):
+    pass
+
+
+def single_quoted_str_representer(dumper, data):
+    return dumper.represent_scalar(
+        'tag:yaml.org,2002:str',
+        data,
+        style="'"
+    )
+yaml.add_representer(SingleQuotedStr, single_quoted_str_representer)
+
+# --------------------------------
+
 # ---------- 数据类 ----------
 class ServiceConfig:
     def __init__(self, service_name: str, lane: str, mse_ns: str,
@@ -190,7 +205,7 @@ class BlueGreenGenerator:
                 'k8s.apisix.apache.org/filter-headers': None,
                 'k8s.apisix.apache.org/filter-headers-expr': None,
                 'k8s.apisix.apache.org/traffic-split-headers': f'{{"baggage": "meshEnv={self.lane}-{laneenv}"}}',
-                'k8s.apisix.apache.org/traffic-split-percentage': '${nouid_precentage}',
+                'k8s.apisix.apache.org/traffic-split-percentage': SingleQuotedStr('${nouid_precentage}'),
                 'k8s.apisix.apache.org/traffic-split-service': f"{self.resource_names['service']}-{env}"
             })
             self._update_ingress_backend(ingress, f"{self.resource_names['service']}-{reenv}")
@@ -288,7 +303,9 @@ class BlueGreenGenerator:
         return ingress
 
     def save_yaml(self, data: Dict, filepath: str):
+
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
+
         def null_representer(dumper, data):
             return dumper.represent_scalar('tag:yaml.org,2002:null', 'null')
         yaml.add_representer(type(None), null_representer)

@@ -4,303 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2977033-da76-4278-97c4-0bf8fd066054" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/gen_blue_green_script_v3.2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen_blue_green_script_v3.3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d2977033-da76-4278-97c4-0bf8fd066054" name="更改" comment="修复bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen_blue_green_script_v3.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen_blue_green_script_v3.1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Deployment/[blue]album-saas-classify.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Deployment/[green]album-saas-classify.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]all_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]all_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]all_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]nouid_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]nouid_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]nouid_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]uid_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]uid_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]uid_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]user_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]user_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[blue]user_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[green]close_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[green]close_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Ingress/[green]close_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/blue/resource/Service/[blue]album-saas-classify-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Deployment/[blue]album-saas-classify.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Deployment/[green]album-saas-classify.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[blue]close_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[blue]close_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[blue]close_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]all_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]all_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]all_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]nouid_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]nouid_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]nouid_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]uid_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]uid_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]uid_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]user_switch_csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]user_switch_csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Ingress/[green]user_switch_csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/green/resource/Service/[green]album-saas-classify-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Deployment/[mse-base]album-saas-classify.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Deployment/[mse-base]nojavaagent-album-saas-classify.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Ingress/[mse-base]csf-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Ingress/[mse-base]csf-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Ingress/[mse-base]csf-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Service/[mse-base]album-saas-classify-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-classify/mse-base/resource/Service/[mse-base]nojavaagent-album-saas-classify-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Deployment/[blue]album-saas-manage.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Deployment/[green]album-saas-manage.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Ingress/[blue]all_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Ingress/[blue]nouid_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Ingress/[blue]uid_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Ingress/[blue]user_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Ingress/[green]close_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/blue/resource/Service/[blue]album-saas-manage-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Deployment/[blue]album-saas-manage.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Deployment/[green]album-saas-manage.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Ingress/[blue]close_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Ingress/[green]all_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Ingress/[green]nouid_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Ingress/[green]uid_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Ingress/[green]user_switch_manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/green/resource/Service/[green]album-saas-manage-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base/resource/Deployment/[mse-base]album-saas-manage.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base/resource/Deployment/[mse-base]nojavaagent-album-saas-manage.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base/resource/Ingress/[mse-base]manage-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base/resource/Service/[mse-base]album-saas-manage-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-manage/mse-base/resource/Service/[mse-base]nojavaagent-album-saas-manage-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Deployment/[blue]album-saas-photo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Deployment/[green]album-saas-photo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]all_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]all_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]all_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]nouid_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]nouid_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]nouid_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]uid_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]uid_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]uid_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]user_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]user_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[blue]user_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[green]close_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[green]close_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Ingress/[green]close_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/blue/resource/Service/[blue]album-saas-photo-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Deployment/[blue]album-saas-photo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Deployment/[green]album-saas-photo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[blue]close_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[blue]close_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[blue]close_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]all_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]all_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]all_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]nouid_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]nouid_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]nouid_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]uid_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]uid_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]uid_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]user_switch_pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]user_switch_photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Ingress/[green]user_switch_photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/green/resource/Service/[green]album-saas-photo-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Deployment/[mse-base]album-saas-photo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Deployment/[mse-base]nojavaagent-album-saas-photo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Ingress/[mse-base]pho-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Ingress/[mse-base]photo-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Ingress/[mse-base]photo-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Service/[mse-base]album-saas-photo-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-photo/mse-base/resource/Service/[mse-base]nojavaagent-album-saas-photo-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Deployment/[blue]album-saas-story.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Deployment/[green]album-saas-story.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]all_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]all_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]all_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]nouid_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]nouid_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]nouid_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]uid_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]uid_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]uid_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]user_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]user_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[blue]user_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[green]close_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[green]close_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Ingress/[green]close_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/blue/resource/Service/[blue]album-saas-story-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Deployment/[blue]album-saas-story.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Deployment/[green]album-saas-story.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[blue]close_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[blue]close_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[blue]close_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]all_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]all_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]all_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]nouid_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]nouid_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]nouid_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]uid_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]uid_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]uid_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]user_switch_story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]user_switch_story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Ingress/[green]user_switch_str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/green/resource/Service/[green]album-saas-story-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Deployment/[mse-base]album-saas-story.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Deployment/[mse-base]nojavaagent-album-saas-story.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Ingress/[mse-base]story-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Ingress/[mse-base]story-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Ingress/[mse-base]str-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Service/[mse-base]album-saas-story-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-story/mse-base/resource/Service/[mse-base]nojavaagent-album-saas-story-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Deployment/[blue]album-saas-timeline.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Deployment/[green]album-saas-timeline.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]all_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]all_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]all_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]nouid_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]nouid_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]nouid_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]uid_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]uid_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]uid_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]user_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]user_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[blue]user_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[green]close_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[green]close_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Ingress/[green]close_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/blue/resource/Service/[blue]album-saas-timeline-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Deployment/[blue]album-saas-timeline.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Deployment/[green]album-saas-timeline.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[blue]close_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[blue]close_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[blue]close_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]all_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]all_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]all_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]nouid_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]nouid_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]nouid_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]uid_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]uid_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]uid_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]user_switch_tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]user_switch_tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Ingress/[green]user_switch_tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/green/resource/Service/[green]album-saas-timeline-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Deployment/[mse-base]album-saas-timeline.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Deployment/[mse-base]nojavaagent-album-saas-timeline.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Ingress/[mse-base]tl-ext.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Ingress/[mse-base]tl-exts.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Ingress/[mse-base]tl-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Service/[mse-base]album-saas-timeline-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/album-saas-timeline/mse-base/resource/Service/[mse-base]nojavaagent-album-saas-timeline-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Deployment/[blue]yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Deployment/[green]yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]all_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]all_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]nouid_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]nouid_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]uid_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]uid_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]user_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[blue]user_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[green]close_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Ingress/[green]close_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/blue/resource/Service/[blue]yun-file-agent-kd-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Deployment/[blue]yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Deployment/[green]yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[blue]close_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[blue]close_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]all_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]all_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]nouid_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]nouid_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]uid_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]uid_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]user_switch_agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Ingress/[green]user_switch_agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/green/resource/Service/[green]yun-file-agent-kd-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/resource/Deployment/[mse-base]nojavaagent-yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/resource/Deployment/[mse-base]yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/resource/Ingress/[mse-base]agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/resource/Ingress/[mse-base]agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/resource/Service/[mse-base]nojavaagent-yun-file-agent-kd-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/file-kd/mse-base/resource/Service/[mse-base]yun-file-agent-kd-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Deployment/[blue]personal-dynamic-service-plus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Deployment/[green]personal-dynamic-service-plus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Ingress/[blue]all_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Ingress/[blue]nouid_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Ingress/[blue]uid_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Ingress/[blue]user_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Ingress/[green]close_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/blue/resource/Service/[blue]personal-dynamic-service-plus-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Deployment/[blue]personal-dynamic-service-plus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Deployment/[green]personal-dynamic-service-plus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Ingress/[blue]close_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Ingress/[green]all_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Ingress/[green]nouid_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Ingress/[green]uid_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Ingress/[green]user_switch_personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/green/resource/Service/[green]personal-dynamic-service-plus-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base/resource/Deployment/[mse-base]nojavaagent-personal-dynamic-service-plus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base/resource/Deployment/[mse-base]personal-dynamic-service-plus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base/resource/Ingress/[mse-base]personal-dynamic-service-plus-apisix.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base/resource/Service/[mse-base]nojavaagent-personal-dynamic-service-plus-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/personal-dynamic-service-plus/mse-base/resource/Service/[mse-base]personal-dynamic-service-plus-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/南基output.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen_blue_green_script_v3.3.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen_blue_green_script_v3.3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,19 +113,33 @@
       <workItem from="1764817975222" duration="1813000" />
       <workItem from="1765262863338" duration="73000" />
       <workItem from="1765263016273" duration="15247000" />
-      <workItem from="1766461890033" duration="4657000" />
+      <workItem from="1766461890033" duration="5365000" />
+      <workItem from="1766656956218" duration="1475000" />
     </task>
+    <task id="LOCAL-00001" summary="修复bug">
+      <option name="closed" value="true" />
+      <created>1766643630303</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766643630303</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修复bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$gen_blue_green_script_v3_1.coverage" NAME="gen_blue_green_script_v3.1 覆盖结果" MODIFIED="1763968485280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$gen_blue_green_script_v3.coverage" NAME="gen_blue_green_script_v3 覆盖结果" MODIFIED="1763714774029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gen_blue_green_script_v3_1_py$gen_blue_green_script_v3_2.coverage" NAME="gen_blue_green_script_v3.2 覆盖结果" MODIFIED="1765424255840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$gen_blue_green_script_v2.coverage" NAME="gen_blue_green_script_v2 覆盖结果" MODIFIED="1763349498974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gen_blue_green_script_v3_1_py$gen_blue_green_script_v3_3.coverage" NAME="gen_blue_green_script_v3.3 覆盖结果" MODIFIED="1766557806688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gen_blue_green_script_v3_1_py$gen_blue_green_script_v3_3.coverage" NAME="gen_blue_green_script_v3.3 覆盖结果" MODIFIED="1766658284803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gen_blue_green_script_v3_1_py$gen_blue_green_script_v3_1.coverage" NAME="gen_blue_green_script_v3.1 覆盖结果" MODIFIED="1764817988300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
