@@ -1,0 +1,23 @@
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app.name: member-vip-test
+  name: member-vip-test-svc-green
+  namespace: test
+spec:
+  clusterIP: ''
+  clusterIPs: []
+  ipFamilies:
+  - IPv6
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: member-vip-test-port
+    port: 19005
+    protocol: TCP
+    targetPort: 19005
+  selector:
+    app.name: member-vip-test
+    sidecar.mesh.io/lane: vip-act-green
+  sessionAffinity: None
+  type: ClusterIP

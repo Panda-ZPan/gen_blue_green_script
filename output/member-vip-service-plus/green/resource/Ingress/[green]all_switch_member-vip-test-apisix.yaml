@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    objectset.rio.cattle.io/applied: H4sIAAAAAAAA/3SQsY6dMBBF/2VqYEHAPnCbKk2UIkoTpZhnjxcHsC3PLNkV4t8jQ5Qm+ySEZN2554xmB4zuOyV2wYMCT/I7pNn5l2oeuHLhaWuggNl5Awo++5dEzFDASoIGBUHtgN4HQXHBc36G+y/SwiRVcqHSKLJQBrlM6NrGom5tSYRUdmNN5UB2LHF8tjUS2cYYOApY8E7LicMYK48rgYKV1julcnOxFGKB4qFrQp5AQdMNN2vbfhwHY0zdjh0Nt7ptNfad6bE2iDd6tn02fuwoMTp2b3DlHFHnodN+FMCRdN7RXXf5tCDzl4vzr5deF2JQP3aYAsv/hur86bBCAZNIzLyIMl2dO+qZ8u13YEqby/r90a68aSgghiTn0GtOQTVjXffHcRQnFhQ8/e2hFrc5eYcr+fYeM/RrIuve4Ph55O9PAAAA///f8j13HwIAAA
+    objectset.rio.cattle.io/id: 431fac3f-eeae-490e-8ef9-a96f0aeef1dd
+    k8s.apisix.apache.org/enable: 'true'
+    k8s.apisix.apache.org/priority: '10'
+    k8s.apisix.apache.org/set-headers: '{"baggage": "meshEnv=vip-act-green"}'
+    k8s.apisix.apache.org/filter-headers: null
+    k8s.apisix.apache.org/filter-headers-expr: null
+    k8s.apisix.apache.org/traffic-split-headers: null
+    k8s.apisix.apache.org/traffic-split-percentage: null
+    k8s.apisix.apache.org/traffic-split-service: null
+  labels:
+    app.name: member-vip-test
+    objectset.rio.cattle.io/hash: 1487ff35998ddd0394e87033ca54d5a0daa7e6f5
+  name: member-vip-test-apisix-green
+  namespace: test
+spec:
+  ingressClassName: apisix
+  rules:
+  - host: member-vip-test.test.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: member-vip-test-svc-green
+            port:
+              number: 19005
+        path: /member-activity
+        pathType: Prefix
