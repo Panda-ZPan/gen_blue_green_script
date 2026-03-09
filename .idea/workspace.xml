@@ -6,7 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d2977033-da76-4278-97c4-0bf8fd066054" name="更改" comment="修复bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen_blue_green_script_v3.3.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen_blue_green_script_v3.3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services模板.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/services模板.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s_yaml/agent-in-a.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s_yaml/agent-in.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s_yaml/yun-file-agent-kd-svc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s_yaml/yun-file-agent-kd.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/global_var.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/resource/Deployment/yun-file-agent-kd.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/resource/Ingress/agent-in.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/resource/Service/yun-file-agent-kd-svc.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.gen_blue_green_script_v2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gen_blue_green_script_v3.1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gen_blue_green_script_v3.2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gen_blue_green_script_v3.3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gen_blue_green_script_v3.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/灰度&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.gen_blue_green_script_v2.executor": "Run",
+    "Python.gen_blue_green_script_v3.1.executor": "Run",
+    "Python.gen_blue_green_script_v3.2.executor": "Run",
+    "Python.gen_blue_green_script_v3.3.executor": "Run",
+    "Python.gen_blue_green_script_v3.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/灰度",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "http.proxy",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\灰度" />
@@ -114,7 +125,9 @@
       <workItem from="1765262863338" duration="73000" />
       <workItem from="1765263016273" duration="15247000" />
       <workItem from="1766461890033" duration="5365000" />
-      <workItem from="1766656956218" duration="1475000" />
+      <workItem from="1766656956218" duration="2655000" />
+      <workItem from="1767750215688" duration="30000" />
+      <workItem from="1773025794080" duration="1353000" />
     </task>
     <task id="LOCAL-00001" summary="修复bug">
       <option name="closed" value="true" />
@@ -124,11 +137,38 @@
       <option name="project" value="LOCAL" />
       <updated>1766643630303</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修复bug">
+      <option name="closed" value="true" />
+      <created>1766658450639</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1766658450639</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修复bug">
+      <option name="closed" value="true" />
+      <created>1766992099443</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766992099443</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复bug" />
