@@ -4,19 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2977033-da76-4278-97c4-0bf8fd066054" name="更改" comment="修复bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services模板.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/services模板.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s_yaml/agent-in-a.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s_yaml/agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s_yaml/yun-file-agent-kd-svc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s_yaml/yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/global_var.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/resource/Deployment/yun-file-agent-kd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/resource/Ingress/agent-in.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moban_v1_20251114173340/resource/Service/yun-file-agent-kd-svc.yaml" beforeDir="false" />
+    <list default="true" id="d2977033-da76-4278-97c4-0bf8fd066054" name="更改" comment="删除多余文件">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/灰度.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/global_var.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Deployment/[blue]member-vip-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Deployment/[green]member-vip-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Ingress/[blue]all_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Ingress/[blue]nouid_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Ingress/[blue]uid_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Ingress/[blue]user_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Ingress/[green]close_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/blue/resource/Service/[blue]member-vip-test-svc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/global_var.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Deployment/[blue]member-vip-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Deployment/[green]member-vip-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Ingress/[blue]close_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Ingress/[green]all_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Ingress/[green]nouid_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Ingress/[green]uid_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Ingress/[green]user_switch_member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/green/resource/Service/[green]member-vip-test-svc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base/global_var.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base/resource/Deployment/[mse-base]member-vip-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base/resource/Deployment/[mse-base]nojavaagent-member-vip-test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base/resource/Ingress/[mse-base]member-vip-test-apisix.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base/resource/Service/[mse-base]member-vip-test-svc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/member-vip-service-plus/mse-base/resource/Service/[mse-base]nojavaagent-member-vip-test-svc.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +149,7 @@
       <workItem from="1766461890033" duration="5365000" />
       <workItem from="1766656956218" duration="2655000" />
       <workItem from="1767750215688" duration="30000" />
-      <workItem from="1773025794080" duration="1353000" />
+      <workItem from="1773025794080" duration="1707000" />
     </task>
     <task id="LOCAL-00001" summary="修复bug">
       <option name="closed" value="true" />
@@ -153,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766992099443</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="删除多余文件">
+      <option name="closed" value="true" />
+      <created>1773027194227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773027194227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +202,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug" />
+    <MESSAGE value="删除多余文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除多余文件" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$gen_blue_green_script_v3_1.coverage" NAME="gen_blue_green_script_v3.1 覆盖结果" MODIFIED="1763968485280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
